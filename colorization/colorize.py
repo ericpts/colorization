@@ -20,8 +20,10 @@ def parse_args():
 if __name__ == '__main__':
 	args = parse_args()
 
-	caffe.set_mode_gpu()
-	caffe.set_device(args.gpu)
+	# caffe.set_mode_gpu()
+	# caffe.set_device(args.gpu)
+
+	caffe.set_mode_cpu()
 
 	# Select desired model
 	net = caffe.Net(args.prototxt, args.caffemodel, caffe.TEST)
